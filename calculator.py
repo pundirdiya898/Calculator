@@ -1,22 +1,23 @@
 import tkinter
 from tkinter import *
-
+#simple calculator in python using Tkinter
+# Click function for appending numbers
 def Click(numbers):
     global operator
     operator=operator+str(numbers)
     text.set(operator)
-
+# to clear the screen
 def btnClear():
     global operator
     operator=""
     text.set("")
-
+# to get result
 def btnEquals():
     global operator
     sumup=str(eval(operator))
     text.set(sumup)
     operator=""
-   
+# creating window for calculator   
 win = Tk()
 win.title("Calculator")
 operator=""
